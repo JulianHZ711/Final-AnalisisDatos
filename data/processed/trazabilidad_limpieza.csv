@@ -1,0 +1,5 @@
+paso,filas_resultantes,filas_eliminadas,motivo
+Carga de balances_raw.csv,850357,0,Archivo generado en la extracción
+Eliminar duplicados exactos,746479,103878,Filas idénticas en todas las columnas
+Conservar el radicado más reciente,744146,2333,Retransmisiones del mismo corte por la misma empresa
+Pivoteo a formato ancho (empresa-año),75829,0,Cambio de forma: una fila por empresa y año
