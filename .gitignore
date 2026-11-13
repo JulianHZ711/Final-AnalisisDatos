@@ -1,0 +1,15 @@
+# Datos crudos (pesados, se regeneran con la sección 1 del notebook)
+data/raw/*
+!data/raw/.gitkeep
+
+# Entornos y credenciales
+.venv/
+venv/
+.env
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# Archivos temporales de Office / Power BI
+~$*
