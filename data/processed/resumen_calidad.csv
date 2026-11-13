@@ -1,0 +1,67 @@
+etapa,control,detalle,unidad,anio,cantidad,total_referencia,porcentaje
+C2,Filas resultantes,Carga de balances_raw.csv,fila de cuenta,,850357,,
+C2,Filas resultantes,Eliminar duplicados exactos,fila de cuenta,,746479,,
+C2,Filas resultantes,Conservar el radicado más reciente,fila de cuenta,,744146,,
+C2,Filas resultantes,Pivoteo a formato ancho (empresa-año),empresa-año,,75829,,
+C2,Filas retiradas,Filas idénticas en todas las columnas,fila de cuenta,,103878,,
+C2,Filas retiradas,Retransmisiones del mismo corte por la misma empresa,fila de cuenta,,2333,,
+C3,Llave inválida,Balances,empresa-año,,0,75829,0.0
+C3,Llave repetida,Balances,empresa-año,,0,75829,0.0
+C3,Llave inválida,Ranking,fila del ranking,,0,50000,0.0
+C3,Llave en conflicto,Ranking,fila del ranking,,0,50000,0.0
+C3,Filas retiradas,Ranking: llave inválida,fila del ranking,,0,50000,0.0
+C3,Filas retiradas,Ranking: duplicados equivalentes,fila del ranking,,0,50000,0.0
+C3,Filas retiradas,Balances durante el cruce,empresa-año,,0,75829,0.0
+C3,Monto inválido,ingresos_operacionales_miles_cop,fila del ranking,,0,50000,0.0
+C3,Monto inválido,ganancia_perdida_miles_cop,fila del ranking,,0,50000,0.0
+C3,Cobertura del cruce,coincide,empresa-año,2019,0,9495,0.0
+C3,Cobertura del cruce,coincide,empresa-año,2020,0,9950,0.0
+C3,Cobertura del cruce,coincide,empresa-año,2021,8817,10435,84.49
+C3,Cobertura del cruce,coincide,empresa-año,2022,8921,10990,81.17
+C3,Cobertura del cruce,coincide,empresa-año,2023,8464,11647,72.67
+C3,Cobertura del cruce,coincide,empresa-año,2024,8493,11490,73.92
+C3,Cobertura del cruce,coincide,empresa-año,2025,8821,11822,74.62
+C3,Cobertura del cruce,sin_coincidencia,empresa-año,2019,0,9495,0.0
+C3,Cobertura del cruce,sin_coincidencia,empresa-año,2020,0,9950,0.0
+C3,Cobertura del cruce,sin_coincidencia,empresa-año,2021,1618,10435,15.51
+C3,Cobertura del cruce,sin_coincidencia,empresa-año,2022,2069,10990,18.83
+C3,Cobertura del cruce,sin_coincidencia,empresa-año,2023,3183,11647,27.33
+C3,Cobertura del cruce,sin_coincidencia,empresa-año,2024,2997,11490,26.08
+C3,Cobertura del cruce,sin_coincidencia,empresa-año,2025,3001,11822,25.38
+C3,Cobertura del cruce,sin_corte_ranking,empresa-año,2019,9495,9495,100.0
+C3,Cobertura del cruce,sin_corte_ranking,empresa-año,2020,9950,9950,100.0
+C3,Cobertura del cruce,sin_corte_ranking,empresa-año,2021,0,10435,0.0
+C3,Cobertura del cruce,sin_corte_ranking,empresa-año,2022,0,10990,0.0
+C3,Cobertura del cruce,sin_corte_ranking,empresa-año,2023,0,11647,0.0
+C3,Cobertura del cruce,sin_corte_ranking,empresa-año,2024,0,11490,0.0
+C3,Cobertura del cruce,sin_corte_ranking,empresa-año,2025,0,11822,0.0
+C3,Ecuación contable,cuadra,empresa-año,,75829,75829,100.0
+C3,Ecuación contable,no_cuadra,empresa-año,,0,75829,0.0
+C3,Ecuación contable,no_evaluable,empresa-año,,0,75829,0.0
+C3,Nulos por columna,nit,empresa-año,,0,75829,0.0
+C3,Nulos por columna,anio,empresa-año,,0,75829,0.0
+C3,Nulos por columna,fecha_corte,empresa-año,,0,75829,0.0
+C3,Nulos por columna,numero_radicado,empresa-año,,0,75829,0.0
+C3,Nulos por columna,punto_entrada,empresa-año,,0,75829,0.0
+C3,Nulos por columna,marco_normativo,empresa-año,,0,75829,0.0
+C3,Nulos por columna,tipo_estado,empresa-año,,0,75829,0.0
+C3,Nulos por columna,activo_corriente,empresa-año,,0,75829,0.0
+C3,Nulos por columna,activo_total,empresa-año,,0,75829,0.0
+C3,Nulos por columna,pasivo_corriente,empresa-año,,65,75829,0.09
+C3,Nulos por columna,pasivo_total,empresa-año,,0,75829,0.0
+C3,Nulos por columna,patrimonio_total,empresa-año,,0,75829,0.0
+C3,Nulos por columna,efectivo,empresa-año,,0,75829,0.0
+C3,Nulos por columna,inventarios,empresa-año,,13343,75829,17.6
+C3,Nulos por columna,deudores_comerciales,empresa-año,,717,75829,0.95
+C3,Nulos por columna,capital_emitido,empresa-año,,4,75829,0.01
+C3,Nulos por columna,ganancias_acumuladas,empresa-año,,15,75829,0.02
+C3,Nulos por columna,macrosector,empresa-año,,32313,75829,42.61
+C3,Nulos por columna,region,empresa-año,,32313,75829,42.61
+C3,Nulos por columna,departamento,empresa-año,,32313,75829,42.61
+C3,Nulos por columna,ciudad,empresa-año,,32313,75829,42.61
+C3,Nulos por columna,ingresos_operacionales_miles_cop,empresa-año,,32313,75829,42.61
+C3,Nulos por columna,ganancia_perdida_miles_cop,empresa-año,,32313,75829,42.61
+C3,Nulos por columna,estado_cruce,empresa-año,,0,75829,0.0
+C3,Nulos por columna,diferencia_contable_miles_cop,empresa-año,,0,75829,0.0
+C3,Nulos por columna,error_relativo_contable,empresa-año,,0,75829,0.0
+C3,Nulos por columna,estado_ecuacion_contable,empresa-año,,0,75829,0.0
