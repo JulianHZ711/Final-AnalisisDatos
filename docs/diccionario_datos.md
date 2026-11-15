@@ -1,7 +1,7 @@
 # Diccionario de datos: modelo estrella
 
-Tablas generadas en la sección 1.4 del notebook y guardadas en `data/processed/`. Son las que se
-cargan en Power BI.
+Tablas generadas en la sección 1.4 del notebook (y `predicciones`, en la sección 3.4) y guardadas
+en `data/processed/`. Son las que se cargan en Power BI.
 
 Los montos están en **miles de pesos colombianos**. Un campo vacío significa que el dato no existe o
 no se pudo calcular (ver las reglas de negocio al final).
@@ -13,8 +13,10 @@ no se pudo calcular (ver las reglas de negocio al final).
 | `fact_indicadores[nit]` | `dim_empresa[nit]` | Muchos a uno |
 | `fact_indicadores[anio]` | `dim_tiempo[anio]` | Muchos a uno |
 | `fact_indicadores[id_sector]` | `dim_sector[id_sector]` | Muchos a uno |
+| `predicciones[nit]` | `dim_empresa[nit]` | Muchos a uno |
+| `predicciones[anio]` | `dim_tiempo[anio]` | Muchos a uno |
 
-El NIT conviene cargarlo como **texto** en las dos tablas para que la relación no falle.
+El NIT conviene cargarlo como **texto** en todas las tablas para que la relación no falle.
 
 ## `fact_indicadores`
 
@@ -76,6 +78,22 @@ Una fila por macrosector (6 filas). Llave: `id_sector`.
 |---|---|---|
 | `id_sector` | Entero | Identificador del macrosector |
 | `macrosector` | Texto | Agropecuario, Comercio, Construcción, Manufactura, Minero o Servicios |
+
+## `predicciones`
+
+Probabilidad de deterioro en el año siguiente según el modelo final (regresión logística). Una fila
+por empresa y año, el mismo grano de `fact_indicadores`.
+
+| Columna | Tipo | Descripción |
+|---|---|---|
+| `nit` | Texto | NIT de la empresa |
+| `anio` | Entero | Año *t* del balance con el que se calcula la probabilidad |
+| `conjunto` | Texto | `entrenamiento` (2019-2022), `prueba` (2023-2024) o `sin objetivo` (2025, o sin año siguiente conocido) |
+| `probabilidad_riesgo` | Decimal | Probabilidad de deterioro en *t+1* (patrimonio negativo o liquidez menor que 1), de 0 a 1 |
+| `deterioro_t1` | 0 / 1 | Lo que pasó en *t+1*. Vacío si no se conoce |
+
+Las probabilidades de 2025 son el pronóstico para 2026. Las de 2019 a 2022 salen de balances con
+los que se entrenó el modelo.
 
 ## Reglas de negocio
 
