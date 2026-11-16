@@ -1,0 +1,4 @@
+id_semaforo,nivel,probabilidad_desde,probabilidad_hasta,color,descripcion
+1,Verde,0.0,0.09,#2E9E5B,Riesgo bajo de deterioro al año siguiente
+2,Amarillo,0.09,0.5,#E3B23C,"Sin alerta del modelo, pero con riesgo superior al normal: vigilar"
+3,Rojo,0.5,1.0,#C8423B,El modelo predice deterioro al año siguiente
